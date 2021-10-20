@@ -12,12 +12,16 @@ public class UserService {
 	
 	private UserDao uDao;
 	
+	public UserService(UserDao uDao) {
+		this.uDao = uDao;
+	}
+	
 	//Retrieving all users as admin
 	public List<User> getAllUsers(){
 		return uDao.getAllUsers();
 	}
 	
-	public User SignIn(String username, String password) {
+	public User signIn(String username, String password) {
 		
 		User u = uDao.getUserByUsername(username);
 		
