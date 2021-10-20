@@ -12,7 +12,7 @@
   
   <servlet>
   	<servlet-name>MasterServlet</servlet-name>
-  	<servlet-class>com.example.servlets.MasterServlet</servlet-class>
+  	<servlet-class>com.revature.servlets.MasterServlet</servlet-class>
   	<load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>

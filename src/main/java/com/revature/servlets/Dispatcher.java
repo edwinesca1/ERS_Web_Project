@@ -12,7 +12,7 @@ public class Dispatcher{
 	public static void process(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException{
 		System.out.println("We are in the servlet dispatcher with URI: " + req.getRequestURI());
 		switch(req.getRequestURI()) {
-		case "ExpenseReimbursementSystem/api/login":
+		case "/ExpenseReimbursementSystem/api/login":
 			LoginController.login(req, res);
 			break;
 		}

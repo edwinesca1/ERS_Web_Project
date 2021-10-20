@@ -13,7 +13,7 @@ async function login(e){
 	}
 	
 	try{
-		let req = await fetch('http://localhost:8080/SocialHubWeekFour/api/login', {
+		let req = await fetch('http://localhost:8080/ExpenseReimbursementSystem/api/login', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
@@ -21,6 +21,7 @@ async function login(e){
 			body: JSON.stringify(user)
 		});
 		let res = await req.json();
+		console.log(res);
 		location.href = '../html/home.html';
 	} catch(e){
 		alert('Username or password was incorrect!');
