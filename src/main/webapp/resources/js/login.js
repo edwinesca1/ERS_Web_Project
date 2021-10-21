@@ -21,8 +21,18 @@ async function login(e){
 			body: JSON.stringify(user)
 		});
 		let res = await req.json();
-		console.log(res);
-		location.href = '../html/home.html';
+
+		//alert(userObj.userRole);
+		//alert(res.username);
+		let uRole = res['userRole'];
+		console.log(uRole);
+		
+		if(uRole == '1' || uRole == 1){
+			location.href = '../html/AdminDashboard.html';
+		}else if(uRole == '2' || uRole == 2){
+			location.href = '../html/EmployeeDashboard.html';
+		}
+		//location.href = '../html/home.html';
 	} catch(e){
 		alert('Username or password was incorrect!');
 		return;
