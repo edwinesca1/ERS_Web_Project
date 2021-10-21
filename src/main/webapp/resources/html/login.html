@@ -2,21 +2,24 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Social Hub</title>
+<title>ERS revature</title>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-
-	<h1>Welcome to Social Hub</h1>
-	<h3>Please Sign In</h3>
-	
-	<form id="login">
-		<label for="username">Username: </label>
-		<input id="username" type="text" name="username" required/>
-		<label for="password">Password: </label>
-		<input id="password" type="password" name="password" required/>
-		<input type="submit" value="Login"/>
-	</form>
-	
-	<script src="../js/login.js"></script>
+ <div class="main">
+    <p class="sign" align="center">Sign in</p>
+    <form class="form1" id="login">
+      <input id="username" class="un " type="text" align="center" placeholder="Username">
+      <input id="password" class="pass" type="password" align="center" placeholder="Password">
+      <input type="submit" class="submit" align="center" value="Login">
+      <p class="newAccount" align="center"><a href="#">Create a new account</a></p>
+            
+        </form>        
+    </div>
+    
+    <script src="../js/login.js"></script>
 </body>
 </html>

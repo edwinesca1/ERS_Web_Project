@@ -3,6 +3,7 @@ package com.revature.controllers;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -46,6 +47,8 @@ public class LoginController {
 			System.out.println("In the post handler");
 			User u = uServ.signIn(username, password);
 			System.out.println(u);
+			Cookie ckUserId = new Cookie("userId", Integer.toString(u.getUserId()));
+			Cookie ckUsername = new Cookie("username", u.getUsername());
 			//We will keep track of if a user is signed in by storing their id in the session
 			req.getSession().setAttribute("id", u.getUserId());
 			res.setStatus(200);
