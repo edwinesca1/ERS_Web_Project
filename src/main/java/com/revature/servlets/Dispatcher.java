@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.revature.controllers.EmployeesController;
 import com.revature.controllers.LoginController;
 
 public class Dispatcher{
@@ -14,6 +15,9 @@ public class Dispatcher{
 		switch(req.getRequestURI()) {
 		case "/ExpenseReimbursementSystem/api/login":
 			LoginController.login(req, res);
+			break;
+		case "/ExpenseReimbursementSystem/api/employees":
+			EmployeesController.getAllEmployees(req, res);
 			break;
 		}
 	}
