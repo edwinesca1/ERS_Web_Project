@@ -7,11 +7,45 @@
 </head>
 <body>
 	<div class="topnav">
-	  <a class="active" href="#home">Home</a>
+	  <a class="active" href="AdminDashboard.html">Home</a>
 	  <a href="#aReimb">All Reimbursements</a>
 	  <a href="#fReimb">Find a reimbursement</a>
 	  <a href="AllUsers.html">Employees</a>
 	  <a href="#logOut">Logout</a>
 	</div>
+	<h2 align="center" class="fTittle">Quick view</h2>
+	
+	<div id="pendingRequest-container" align="center">
+	<h4 align="center">Pending Requests</h4>
+	<table id="pending-table">
+	  <tr>
+	    <th>ID</th>
+	    <th>Employee</th>
+	    <th>type</th>
+	    <th>Description</th>
+	    <th>Amount</th>
+	    <th>Status</th>
+	    <th>Date submitted</th>
+	  </tr>
+	  </table>
+	</div>
+	
+	<div id="resolvedRequest-container" align="center">
+	<h4 align="center">Resolved Requests</h4>
+	<table id="resolved-table">
+	  <tr>
+	    <th>ID</th>
+	    <th>Employee</th>
+	    <th>Resolver</th>
+	    <th>type</th>
+	    <th>Description</th>
+	    <th>Amount</th>
+	    <th>Status</th>
+	    <th>Date submitted</th>
+	    <th>Date resolved</th>
+	  </tr>
+	  </table>
+	</div>
+	<script src="../js/allRequests.js"></script>
 </body>
 </html>

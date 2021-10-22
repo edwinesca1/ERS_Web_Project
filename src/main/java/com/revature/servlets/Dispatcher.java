@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.revature.controllers.EmployeesController;
 import com.revature.controllers.LoginController;
+import com.revature.controllers.ReimbursementController;
 
 public class Dispatcher{
 	public static void process(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException{
@@ -18,6 +19,9 @@ public class Dispatcher{
 			break;
 		case "/ExpenseReimbursementSystem/api/employees":
 			EmployeesController.getAllEmployees(req, res);
+			break;
+		case "/ExpenseReimbursementSystem/api/reimbursements":
+			ReimbursementController.getAllReimbursements(req, res);
 			break;
 		}
 	}

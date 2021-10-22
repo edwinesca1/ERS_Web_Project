@@ -5,10 +5,15 @@ import java.util.Date;
 import java.util.List;
 
 import com.revature.models.Reimbursement;
+import com.revature.models.ReimbursementDisplay;
 
 public interface ReimbursementDao {
 	
-	List<Reimbursement> getAllReimbursement(int t);
+	List<ReimbursementDisplay> getAllReimbursement();
+	
+	List<Reimbursement> getAllPendingReimbursement();
+	
+	List<Reimbursement> getAllResolvedReimbursement();
 	
 	Reimbursement createNewReimbursement(Reimbursement r) throws SQLException;
 	
