@@ -21,6 +21,10 @@ public class UserService {
 		return uDao.getAllUsers();
 	}
 	
+	public List<User> getUserByFullName(String username){
+		return uDao.getUserByFullName(username);
+	}
+	
 	public User signIn(String username, String password) {
 		
 		User u = uDao.getUserByUsername(username);

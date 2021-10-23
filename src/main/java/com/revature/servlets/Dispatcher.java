@@ -20,6 +20,10 @@ public class Dispatcher{
 		case "/ExpenseReimbursementSystem/api/employees":
 			EmployeesController.getAllEmployees(req, res);
 			break;
+		case "/ExpenseReimbursementSystem/api/employee":
+			System.out.println("You are in specific employee switch case");
+			EmployeesController.getEmployeeByFullName(req, res);
+			break;
 		case "/ExpenseReimbursementSystem/api/reimbursements":
 			ReimbursementController.getAllReimbursements(req, res);
 			break;
