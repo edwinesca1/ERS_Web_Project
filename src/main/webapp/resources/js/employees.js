@@ -1,7 +1,5 @@
 getEmployees();
 
-//let mytable = document.getElementById('employees-table');
-
 async function getEmployees(){
 	let res = await fetch('http://localhost:8080/ExpenseReimbursementSystem/api/employees');
 	let data = await res.json();
@@ -35,10 +33,10 @@ function populateEmployees(data){
 }
 
 
+
 document.getElementById('searchbtn').addEventListener('click', getSpecificEmployee);
 
 async function getSpecificEmployee(e){
-	//alert('function');
 	e.preventDefault();
 	
 	let nameEmployee = document.getElementById('searchEmploy').value;
@@ -54,6 +52,7 @@ async function getSpecificEmployee(e){
 	 
 	 populateEmployee(data);
 }
+
 
 function populateEmployee(specificEmploy){
 	let mytable = document.getElementById('employees-table');
@@ -79,9 +78,6 @@ function populateEmployee(specificEmploy){
 		cell4.innerHTML = employeesObj['lName'];
 		cell5.innerHTML = employeesObj['email'];
 		console.log(cell2);
-		
-		//old_tbody.parentNode.replaceChild(old_tbody, row);
-	
 	}
 }
 

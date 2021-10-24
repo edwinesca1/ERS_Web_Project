@@ -6,6 +6,7 @@ import java.io.IOException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.revature.dao.UserDao;
 import com.revature.dao.UserDaoDB;
@@ -50,7 +51,8 @@ public class LoginController {
 			Cookie ckUserId = new Cookie("userId", Integer.toString(u.getUserId()));
 			Cookie ckUsername = new Cookie("username", u.getUsername());
 			//We will keep track of if a user is signed in by storing their id in the session
-			req.getSession().setAttribute("id", u.getUserId());
+			HttpSession mySession = req.getSession();
+			mySession.setAttribute("id", u.getUserId());
 			res.setStatus(200);
 			res.getWriter().write(new ObjectMapper().writeValueAsString(u));
 		} catch(Exception e) {

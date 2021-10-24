@@ -24,6 +24,10 @@ public class Dispatcher{
 			System.out.println("You are in specific employee switch case");
 			EmployeesController.getEmployeeByFullName(req, res);
 			break;
+		case "/ExpenseReimbursementSystem/api/employeeAccount":
+			System.out.println("You are in specific employee by session");
+			EmployeesController.getEmployeeBySession(req, res);
+			break;
 		case "/ExpenseReimbursementSystem/api/reimbursements":
 			ReimbursementController.getAllReimbursements(req, res);
 			break;

@@ -68,6 +68,34 @@ public class UserDaoDB implements UserDao{
 		}
 		return null;
 	}
+	
+	@Override
+	public User getUserById(int userId) {
+		User user = new User();
+		
+		try {
+			Connection con = conUtil.getConnection();
+			
+			String sql = "SELECT * FROM ers_users WHERE ers_users.ers_user_id = " + userId;
+			Statement s = con.createStatement();
+			ResultSet rs = s.executeQuery(sql);
+			
+			while(rs.next()) {
+				user.setUserId(rs.getInt(1));
+				user.setUsername(rs.getString(2));
+				user.setPassword(rs.getString(3));
+				user.setfName(rs.getString(4));
+				user.setlName(rs.getString(5));
+				user.setEmail(rs.getString(6));
+				user.setUserRole(rs.getInt(7));
+			}
+			return user;
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 	@Override
 	public User getUserByUsername(String userUserName) {
@@ -85,8 +113,8 @@ public class UserDaoDB implements UserDao{
 				user.setUserId(rs.getInt(1));
 				user.setUsername(rs.getString(2));
 				user.setPassword(rs.getString(3));
-				user.setlName(rs.getString(4));
-				user.setfName(rs.getString(5));
+				user.setfName(rs.getString(4));
+				user.setlName(rs.getString(5));
 				user.setEmail(rs.getString(6));
 				user.setUserRole(rs.getInt(7));
 			}

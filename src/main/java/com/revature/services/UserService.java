@@ -25,6 +25,19 @@ public class UserService {
 		return uDao.getUserByFullName(username);
 	}
 	
+	public User getUserById(int userId) {
+			
+			User u = uDao.getUserById(userId);
+			
+			if(u.getUserId() == 0) {
+				Logging.logger.warn("User is not logged in");
+				throw new UserDoesNotExistException();
+			}else {
+				Logging.logger.info("User info retrieve succesfully");
+				return u;
+			}
+	}
+	
 	public User signIn(String username, String password) {
 		
 		User u = uDao.getUserByUsername(username);

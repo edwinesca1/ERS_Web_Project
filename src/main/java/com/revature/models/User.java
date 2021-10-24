@@ -4,10 +4,10 @@ public class User {
 
 		private int userId;
 		private String username;
-		private String password;
 		private String fName;
 		private String lName;
 		private String email;
+		private String password;
 		private int userRole;
 		
 		public User() {
@@ -71,7 +71,7 @@ public class User {
 		
 		@Override
 		public String toString() {
-			return "User [userId=" + userId + ", username=" + username + ", password=" + password + ", fName=" + fName
-					+ ", lName=" + lName + ", email=" + email + ", userRole=" + userRole + "]";
+			return "User [userId=" + userId + ", username=" + username + ", fName=" + fName + ", lName=" + lName
+					+ ", email=" + email + ", password=" + password + ", userRole=" + userRole + "]";
 		}
 }

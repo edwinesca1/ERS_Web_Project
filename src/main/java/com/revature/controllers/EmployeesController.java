@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -36,6 +37,18 @@ public class EmployeesController {
 			System.out.println(users);
 			System.out.println("Before mapping the response");
 			res.getWriter().write(new ObjectMapper().writeValueAsString(users));
+		}
+	}
+	
+	public static void getEmployeeBySession(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException{
+		if(req.getMethod().equals("GET")) {
+			HttpSession session = req.getSession(true);
+			int userId = (Integer) session.getAttribute("id");
+			User uEmployee = uServ.getUserById(userId);
+			
+			System.out.println(uEmployee);
+			System.out.println("Before mapping the response for employee by Id");
+			res.getWriter().write(new ObjectMapper().writeValueAsString(uEmployee));
 		}
 	}
 	

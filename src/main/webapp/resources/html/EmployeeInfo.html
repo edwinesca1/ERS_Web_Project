@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Account</title>
+<link href="../css/AccountInfo.css" rel="stylesheet">
+</head>
+<body>
+<div class="topnav">
+	  <a class="active" href="EmployeeDashboard.html">Home</a>
+	  <a href="#nReimb">New reimbursement</a>
+	  <a href="EmployeeInfo.html">Account</a>
+	  <a href="#logOut">Logout</a>
+	</div>
+	  <h1>Account information</h1>
+<form>
+	    
+    <div class="contentform">
+
+    	<div class="leftcontact">
+
+            <div class="form-group">
+            <p>First name</p>
+            <span class="icon-case"><i class="fa fa-user"></i></span>
+				<input id="fName" type="text" name="fName">
+                <div class="validation"></div>
+			</div>
+			
+			<div class="form-group">
+			<p>Last name</p>
+			<span class="icon-case"><i class="fa fa-home"></i></span>
+				<input id="lName" type="text" name="lName">
+                <div class="validation"></div>
+			</div>
+
+			<div class="form-group">
+			<p>E-mail</p>	
+			<span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                <input id="email" type="email" name="email" data-rule="email">
+                <div class="validation"></div>
+			</div>	
+
+	</div>
+
+	<div class="rightcontact">
+	
+			      <div class="form-group">
+			        <p>Username</p>
+			        <span class="icon-case"><i class="fa fa-male"></i></span>
+				        <input id="username" type="text" name="username">
+                <div class="validation"></div>
+      		 </div> 	
+
+			<div class="form-group">
+			<p>New password</p>
+			<span class="icon-case"><i class="fa fa-building-o"></i></span>
+				<input id="newPassword" type="password" name="newPassword" title="Enter a new password to update if desired">
+                <div class="validation"></div>
+			</div>
+			
+			<div class="form-group">
+			<p>confirm identity</p>
+			<span class="icon-case"><i class="fa fa-building-o"></i></span>
+				<input id="passwordConfirm" type="password" name="passwordConfirm">
+                <div class="validation"></div>
+			</div>
+
+	</div>
+	</div>
+<button type="submit" class="bouton-contact">Update</button>
+	
+</form>	
+	  
+<script src="../js/AccountInfo.js"></script>
+</body>
+</html>

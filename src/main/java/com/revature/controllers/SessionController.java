@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 public class SessionController {
 
 	public static void getSession(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException{
-		
+		System.out.println("before setting sesInfo");
 		HttpSession session = req.getSession();
 		
 		ObjectMapper mapper = new ObjectMapper();
@@ -27,9 +27,10 @@ public class SessionController {
 		}
 		
 		sesInfo.put("userId", session.getAttribute("id").toString());
-		
+		System.out.println("after setting sesInfo");
+		res.setStatus(200);
 		res.getWriter().write((new ObjectMapper().writeValueAsString(sesInfo)));
-		
+		System.out.println(res.getStatus());
 	}
 	
 }
