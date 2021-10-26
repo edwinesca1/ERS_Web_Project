@@ -23,3 +23,7 @@ function populateAccount(data){
 		    document.getElementById(key).value = data[key];
 		}
 }
+//Code above loads the fields for the account to be updated
+//-----------------------------------------------------------------------------------------
+//Code below to make the update request 
+
