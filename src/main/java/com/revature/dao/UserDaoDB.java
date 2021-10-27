@@ -150,4 +150,31 @@ public class UserDaoDB implements UserDao{
 		return u1;
 	}
 
+	@Override
+	public int updateUser(int id, String f, String l, String e, String u, String nPass, String cPass) throws SQLException {
+		
+		Connection con = conUtil.getConnection();
+		
+		String sql = "";
+		
+		if(nPass == null || nPass == "") {
+			sql = "UPDATE ers_users "
+					+ "SET user_first_name='"+ f +"',"
+					+ "	user_last_name='"+ l +"',"
+					+ "	user_email='"+ e +"' "
+					+ "WHERE ers_user_id = "+ id ;
+		}else {
+			sql = "UPDATE ers_users "
+					+ "SET user_first_name='"+ f +"',"
+					+ "	user_last_name='"+ l +"',"
+					+ "	user_email='"+ e +"',"
+					+ "	ers_password='"+ nPass +"' "
+					+ "WHERE ers_user_id = "+ id ;
+		}
+		Statement s = con.createStatement();
+		int rowsAffected = s.executeUpdate(sql);
+		
+		return rowsAffected;
+	}
+
 }

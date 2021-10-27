@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  background-color: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -139,7 +139,7 @@ i {
 }
 
 .bouton-contact{
-  background-color: #8C55AA;
+  background: linear-gradient(90deg, #E040FB, #9C27B0, #E040FB);
   color: #FFF;
   text-align: center;
   width: 100%;

@@ -1,5 +1,6 @@
 package com.revature.services;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.revature.dao.UserDao;
@@ -52,5 +53,27 @@ public class UserService {
 			Logging.logger.info("User logged in successfully");
 			return u;
 		}
+	}
+	
+	public int updateAccount(String f, String l, String e, String u, String nPass, String cPass) {
+		
+		User us = uDao.getUserByUsername(u);
+		System.out.println(us);
+		int rowsUpdated = 0;
+		
+		if(us.getUserId() == 0) {
+			Logging.logger.warn("User does not exist in the data base");
+			Logging.logger.warn(new InvalidCredentialsException());
+		}else if(!us.getPassword().equals(cPass)) {
+			Logging.logger.warn("Confirmation password does not match");
+			Logging.logger.warn(new InvalidCredentialsException());
+		}else {
+			try {
+				rowsUpdated = uDao.updateUser(us.getUserId(), f, l, e, u, nPass, cPass);
+			}catch(SQLException ex) {
+				Logging.logger.warn("Update account failed");
+			}
+		}
+		return rowsUpdated;
 	}
 }

@@ -5,10 +5,12 @@ var employeePssAcc;
 
 //Function to retrieve employee account information for employee user
 async function accountEmployee(){
+	console.log("First function");
 	let res = await fetch('http://localhost:8080/ExpenseReimbursementSystem/api/employeeAccount');
 	let data = await res.json();
 	//let data1 = JSON.stringify(data);
 	console.log(data);
+	console.log("First function");
 	populateAccount(data);
 }
 
@@ -27,3 +29,46 @@ function populateAccount(data){
 //-----------------------------------------------------------------------------------------
 //Code below to make the update request 
 
+let form = document.getElementById("UpdateAccount").addEventListener('submit', updateInfo);
+
+async function updateInfo(e){
+	
+	e.preventDefault();
+	alert('POST method');
+	let fName = document.getElementById('fName').value;
+	let lName = document.getElementById('lName').value;
+	let email = document.getElementById('email').value;
+	let username = document.getElementById('username').value;
+	let newPassword = document.getElementById('newPassword').value;
+	let cPassword = document.getElementById('passwordConfirm').value;
+	
+	let newUserInfo = {
+		fName,
+		lName,
+		email,
+		username,
+		newPassword,
+		cPassword
+	};
+	
+	try{
+	req = await fetch('http://localhost:8080/ExpenseReimbursementSystem/api/employeeAccount', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+		body: JSON.stringify(newUserInfo)
+	});
+	
+	let res = await req.json();
+	
+	if(res.transactionStatus === 'Successful'){
+		alert(res.message);
+		location.href = '../html/EmployeeDashboard.html';
+	}else{
+	alert(res.message);
+	}
+	}catch(e){
+		console.log('An error ocurred');
+	}
+}
