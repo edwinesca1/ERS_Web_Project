@@ -23,11 +23,13 @@ public class EmployeesController {
 	private static UserService uServ = new UserService(uDao);
 	
 	public static void getAllEmployees(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException{
-		if(req.getMethod().equals("GET")) {
-			List<User> users = uServ.getAllUsers();
-			System.out.println(users);
-			res.getWriter().write(new ObjectMapper().writeValueAsString(users));
-		}
+
+			if(req.getMethod().equals("GET")) {
+				List<User> users = uServ.getAllUsers();
+				System.out.println(users);
+				res.getWriter().write(new ObjectMapper().writeValueAsString(users));
+			}
+
 	}
 	
 	public static void getEmployeeByFullName(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException{
@@ -82,8 +84,6 @@ public class EmployeesController {
 			//logic for user update account
 			HttpSession session = req.getSession(true);
 			//System.out.println(session.getAttribute("id"));
-			if(session.getAttribute("id") != null)
-			{
 				System.out.println("After session ID");
 				int u = uServ.updateAccount(fName, lName, email, username, newPassword, cPassword);
 				if(u == 1) {
@@ -97,12 +97,7 @@ public class EmployeesController {
 					ret.put("message", "Confirmation password incorrect!");
 					res.getWriter().write(new ObjectMapper().writeValueAsString(ret));
 				}
-			}else {
-				System.out.println("not rows affected!");
-				res.setStatus(404);
-				ret.put("message", "User is not logged In!");
-				res.getWriter().write(new ObjectMapper().writeValueAsString(ret));
-			}
+
 		}
 	}
 	

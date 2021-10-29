@@ -15,7 +15,7 @@ function checkSession(){
 //-------------------------------verifying session----------------------------------------------------------
 
 async function getReimbursements(){
-	let res = await fetch('http://localhost:8080/ExpenseReimbursementSystem/api/reimbursements');
+	let res = await fetch('http://localhost:8080/ExpenseReimbursementSystem/api/Allreimbursements');
 	let data = await res.json();
 	populateRequests(data);
 }

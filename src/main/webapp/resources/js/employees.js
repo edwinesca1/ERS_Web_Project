@@ -1,3 +1,17 @@
+checkSession()
+
+function checkSession(){
+	fetch('http://localhost:8080/ExpenseReimbursementSystem/api/checkSession').then(function(Response) {
+		console.log(Response.status)
+		if(Response.status === 401)
+		{
+			alert('Access denied, you are not logged in!');
+			location.href = '../html/login.html';
+		}
+	})
+}
+//-------------------------------verifying session----------------------------------------------------------
+
 getEmployees();
 
 async function getEmployees(){

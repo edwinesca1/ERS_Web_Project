@@ -21,16 +21,30 @@ public class SessionController {
 		ObjectNode sesInfo = mapper.createObjectNode();
 		
 		if(session.getAttribute("id") == null) {
-			res.setStatus(404);
-			res.getWriter().println("User is not logged in");
-			return;
-		}
-		
+			System.out.println("No session ID!");
+			res.setStatus(401);
+			sesInfo.put("message", "User is not logged In!");
+			res.getWriter().write(new ObjectMapper().writeValueAsString(sesInfo));
+		}else {
 		sesInfo.put("userId", session.getAttribute("id").toString());
 		System.out.println("after setting sesInfo");
 		res.setStatus(200);
 		res.getWriter().write((new ObjectMapper().writeValueAsString(sesInfo)));
 		System.out.println(res.getStatus());
+		}
+	}
+	
+	public static void dropSession(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException{
+		System.out.println("before deleting session");
+		HttpSession session = req.getSession();
+		ObjectMapper mapper = new ObjectMapper();
+		
+		session.invalidate();
+		
+		ObjectNode sesInfo = mapper.createObjectNode();
+		sesInfo.put("message", "User logged out!");
+		res.setStatus(200);
+		res.getWriter().write((new ObjectMapper().writeValueAsString(sesInfo)));
 	}
 	
 }

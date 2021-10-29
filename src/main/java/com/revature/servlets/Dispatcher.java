@@ -9,11 +9,15 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.revature.controllers.EmployeesController;
 import com.revature.controllers.LoginController;
 import com.revature.controllers.ReimbursementController;
+import com.revature.controllers.SessionController;
 
 public class Dispatcher{
 	public static void process(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException{
 		System.out.println("We are in the servlet dispatcher with URI: " + req.getRequestURI());
 		switch(req.getRequestURI()) {
+		case "/ExpenseReimbursementSystem/api/NewReimbursement":
+			ReimbursementController.createNewReimbursement(req, res);
+			break;
 		case "/ExpenseReimbursementSystem/api/login":
 			LoginController.login(req, res);
 			break;
@@ -30,6 +34,18 @@ public class Dispatcher{
 			break;
 		case "/ExpenseReimbursementSystem/api/reimbursements":
 			ReimbursementController.getAllReimbursements(req, res);
+			break;
+		case "/ExpenseReimbursementSystem/api/Allreimbursements":
+			ReimbursementController.getAllReimbursementsInFull(req, res);
+			break;
+		case "/ExpenseReimbursementSystem/api/employeeRequests":
+			ReimbursementController.getAllReimbursementsById(req, res);
+			break;
+		case "/ExpenseReimbursementSystem/api/logout":
+			SessionController.dropSession(req, res);
+			break;
+		case "/ExpenseReimbursementSystem/api/checkSession":
+			SessionController.getSession(req, res);
 			break;
 		}
 	}

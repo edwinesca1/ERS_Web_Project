@@ -7,15 +7,16 @@ function checkSession(){
 		{
 			alert('Access denied, you are not logged in!');
 			location.href = '../html/login.html';
-		}else{
-			getReimbursements();
 		}
 	})
 }
 //-------------------------------verifying session----------------------------------------------------------
 
+
+getReimbursements();
+
 async function getReimbursements(){
-	let res = await fetch('http://localhost:8080/ExpenseReimbursementSystem/api/reimbursements');
+	let res = await fetch('http://localhost:8080/ExpenseReimbursementSystem/api/employeeRequests');
 	let data = await res.json();
 	populateRequests(data);
 }

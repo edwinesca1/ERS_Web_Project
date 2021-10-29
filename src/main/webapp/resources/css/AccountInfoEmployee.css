@@ -52,8 +52,9 @@ body {
 .info i {
   color:#F6AA93;
 }
-form h1 {
-  font-size: 18px;
+
+h1 {
+  font-size: 24px;
 
   color: rgb(255, 255, 255);
   padding: 22px 25px;
@@ -67,7 +68,7 @@ form {
   border-radius: 5px;
   max-width:700px;
   width:100%;
-  margin: 5% auto;
+  margin:auto;
   background-color: #FFFFFF;
   overflow: hidden;
 }
@@ -84,10 +85,13 @@ p {
 }
 
 h1 {
-  text-align:center; 
-  color: #666;
-  text-shadow: 1px 1px 0px #FFF;
-  margin:50px 0px 0px 0px
+  font-size: 24px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #f2f2f2;
+  padding: 22px 25px;
+  border-radius: 5px;
+  margin: 5px auto; 
+  text-align:Center
 }
 
 input {
@@ -103,6 +107,7 @@ input {
 a {
   text-decoration:inherit
 }
+
 
 textarea {
   border-radius: 0px 5px 5px 0px;
