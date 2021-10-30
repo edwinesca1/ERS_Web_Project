@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="ISO-8859-1">
+        <title>Reimbursements</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://designer.igniteui.com/packages/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="https://designer.igniteui.com/css/themes/infragistics/infragistics.theme.css">
+		<link rel="stylesheet" href="https://designer.igniteui.com/css/structure/infragistics.css">
+        <link rel="stylesheet" href="../css/ApproveDenyRequest.css">
+	</head>
+	<body>
+        <div id="container1">
+            <div class="topnav">
+                <a class="active" href="AdminDashboard.html">Home</a>
+                <a href="AllReimbRequests.html">All Reimbursements</a>
+                <a href="ApproveDenieRequest.html">Find a reimbursement</a>
+                <a href="AllUsers.html">Employees</a>
+                <a href="LogOut.html">Logout</a>
+              </div>
+        </div>
+        <div style="align-content: center;" id="container2">
+            <h1 align="center" class="fTittle">Find a reimbursement</h1>
+            
+        </div>  
+    		<div id="row1" class="row">
+                <div class="col-md-6">
+                    <div id="container3">
+                        <table style="width: 100%;" id="pending-table">
+                            <thead>
+                                <tr>
+                                <th>ID</th>
+                                <th>Employee</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Date submitted</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top: 10%;" id="container5">
+                        <form class="form-wrapper">
+                            <div class="metod">
+                               <div class="search">
+                                  <input id="searchEmploy" type="text" class="searchTerm" placeholder="Search for...">
+                                  <button id="searchbtn" type="submit" class="searchButton" value="Search">Search</button>
+                               </div>
+                            </div>
+                            <div id="rdbtndiv" class="metod">
+                                <div> 
+                                    <input type="radio" value=1 id="radio1" name="metod" />
+                                    <label for="radio1" class="radio">Reimbursement ID</label>
+                                </div>
+                                <div>
+                                    <input type="radio" value=2 id="radio2" name="metod" checked/>
+                                    <label for="radio2" class="radio">Employee name</label>
+                                </div>
+                                <div> 
+                                    <input type="radio" value=3 id="radio3" name="metod" />
+                                    <label for="radio3" class="radio">Username</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6" style="align-content: center;">
+                    <div id="container4" >
+                        <form id= "ApproveDenyReimb">
+                            <div class="GoBack" style="margin-left: 10px; margin-top: 10px;">
+                                <h3>Information</h3>
+                            </div>
+                            
+                            <div class="contentform" style="margin-bottom: 0;">
+                            
+                        
+                                <div class="leftcontact">
+                        
+                                    <div class="form-group">
+                                        <p>Request ID</p>
+                                        <span class="icon-case"><i class="fa fa-user"></i></span>
+                                            <input id="ID" type="text" name="ID" readonly>
+                                            <div class="validation"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <p>Employee</p>
+                                        <span class="icon-case"><i class="fa fa-home"></i></span>
+                                            <input id="Employee" type="text" name="eName" readonly>
+                                            <div class="validation"></div>
+                                    </div>
+                        
+                                    <div class="form-group">
+                                        <p>Date submitted</p>	
+                                        <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                                            <input id="Date submitted" type="text" name="dateSub" readonly>
+                                            <div class="validation"></div>
+                                    </div>	
+                        
+                                </div>
+                            
+                                <div class="rightcontact">
+                                
+                                    <div class="form-group">
+                                             <p>Status</p>
+                                            <span class="icon-case"><i class="fa fa-male"></i></span>
+                                                    <input id="Status" type="text" name="status" readOnly>
+                                            <div class="validation"></div>
+                                    </div> 	
+                            
+                                    <div class="form-group">
+                                            <p>Type</p>
+                                            <span class="icon-case"><i class="fa fa-male"></i></span>
+                                                <input id="Type" type="text" name="type" readOnly>
+                                        <div class="validation"></div>
+                                    </div>
+                                        
+                                    <div class="form-group">
+                                        <p>Amount</p>
+                                        <span class="icon-case"><i class="fa fa-male"></i></span>
+                                            <input id="Amount" type="text" name="amount" readOnly>
+                                        <div class="validation"></div>
+                                    </div>  
+                                </div>
+
+                                <div class="form-group" style="margin-bottom: 0;">
+                                        <p>Description</p>
+                                        <span class="icon-case"><i class="fa fa-male"></i></span>
+                                            <textarea id="Description" rows=10 cols=10 name="description" readonly></textarea>
+                                    <div class="validation"></div>
+                                </div>
+                            </div>
+                            
+                            <button id="btnapprove" type="submit" style="margin-top: 0;" class="boutonapprove">Approve</button><button id="btndeny" type="submit" style="margin-top: 0;" class="boutondeny">Deny</button>    
+                        </form>
+                    </div>
+                </div>
+            </div>
+         <script src="../js/ApproveDenyRequest.js"></script>  
+    </body>
+</html>

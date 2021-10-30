@@ -156,6 +156,10 @@ i {
   font-size: 18px;
 }
 
+.bouton-contact:hover {
+      background: #E040FB;
+      }
+
 .leftcontact {
   width:49.5%; 
   float:left;
