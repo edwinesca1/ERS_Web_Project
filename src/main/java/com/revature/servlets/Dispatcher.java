@@ -38,9 +38,22 @@ public class Dispatcher{
 		case "/ExpenseReimbursementSystem/api/Allreimbursements":
 			ReimbursementController.getAllReimbursementsInFull(req, res);
 			break;
+		case "/ExpenseReimbursementSystem/api/filteredRequestI":
+			ReimbursementController.getAllReimbursementsI(req, res);
+			break;
+		case "/ExpenseReimbursementSystem/api/filteredRequestU":
+			ReimbursementController.getAllReimbursementsU(req, res);
+			break;
+		case "/ExpenseReimbursementSystem/api/filteredRequestE":
+			ReimbursementController.getAllReimbursementsE(req, res);
+			break;
 		case "/ExpenseReimbursementSystem/api/employeeRequests":
 			ReimbursementController.getAllReimbursementsById(req, res);
 			break;
+		case "/ExpenseReimbursementSystem/api/ResolveReimbursement":
+			ReimbursementController.resolveReimbursement(req, res);
+			break;
+			
 		case "/ExpenseReimbursementSystem/api/logout":
 			SessionController.dropSession(req, res);
 			break;

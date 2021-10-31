@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Admin Dashboard</title>
-<link rel="stylesheet" href="../css/home.css">
+<link rel="stylesheet" href="../css/allUser.css">
 </head>
 <body>
 	<div class="topnav">
@@ -14,14 +14,7 @@
 	  <a href="LogOut.html">Logout</a>
 	</div>
 	<h1 class="fTittle" align="center">List of employees</h1>
-	<form class="form-wrapper">
-		<div class="wrap">
-		   <div class="search">
-		      <input id="searchEmploy" type="text" class="searchTerm" placeholder="Search for...">
-		      <input id="searchbtn" type="submit" class="searchButton" value="Search">
-		   </div>
-		</div>
-	</form>
+	
 	<div id="Users-container" align="center">
 	<table id="employees-table">
 		<thead id="employee-thead">
@@ -36,7 +29,19 @@
 		<tbody>
 		</tbody>
 	  </table>
-	</div>
+	  
+		  <div style="margin-top: 10%;" id="container5">
+	           <form class="form-wrapper">
+	              <div class="metod">
+	                 <div class="search">
+	                    <input id="searchEmploy" type="text" class="searchTerm" placeholder="Search for...">
+	                    <button id="searchbtn" type="submit" class="searchButton" value="Search">Search</button>
+	                 </div>
+	              </div>
+	           </form>
+	      </div>
+	  </div>
+
 <script src="../js/employees.js"></script>
 </body>
 </html>

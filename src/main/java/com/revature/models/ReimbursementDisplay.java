@@ -13,8 +13,10 @@ public class ReimbursementDisplay {
 	private int reimbTypeId;
 	private String aName;
 	private String aLastname;
+	private String afullName;
 	private String rName;
 	private String rLastname;
+	private String rfullName;
 	private String reimbStatus;
 	private String reimbType;
 	
@@ -37,8 +39,10 @@ public class ReimbursementDisplay {
 		this.reimbTypeId = reimbTypeId;
 		this.aName = aName;
 		this.aLastname = aLastname;
+		this.afullName = aName + " " + aLastname;
 		this.rName = rName;
 		this.rLastname = rLastname;
+		this.rfullName = rName + " " + rLastname;
 		this.reimbStatus = reimbStatus;
 		this.reimbType = reimbType;
 	}
@@ -168,8 +172,24 @@ public class ReimbursementDisplay {
 		return "ReimbursementDisplay [reimbId=" + reimbId + ", amount=" + amount + ", reimbSubmitted=" + reimbSubmitted
 				+ ", reimbResolved=" + reimbResolved + ", description=" + description + ", reimbAuthor=" + reimbAuthor
 				+ ", reimbResolver=" + reimbResolver + ", reimbStatusId=" + reimbStatusId + ", reimbTypeId="
-				+ reimbTypeId + ", aName=" + aName + ", aLastname=" + aLastname + ", rName=" + rName + ", rLastname="
-				+ rLastname + ", reimbStatus=" + reimbStatus + ", reimbType=" + reimbType + "]";
+				+ reimbTypeId + ", aName=" + aName + ", aLastname=" + aLastname + ", aFullName=" + afullName + ", rName=" + rName + ", rLastname="
+				+ rLastname + ", rFullName=" + rfullName + ", reimbStatus=" + reimbStatus + ", reimbType=" + reimbType + "]";
+	}
+
+	public String getRfullName() {
+		return rfullName;
+	}
+
+	public void setRfullName(String rfullName) {
+		this.rfullName = rfullName;
+	}
+
+	public String getAfullName() {
+		return afullName;
+	}
+
+	public void setAfullName(String afullName) {
+		this.afullName = afullName;
 	}
 	
 }

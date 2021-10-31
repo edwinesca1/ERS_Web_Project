@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../css/home.css">
+<link rel="stylesheet" href="../css/allReimb.css">
 </head>
 <body>
 	<div class="topnav">
@@ -18,34 +18,50 @@
 	<div id="pendingRequest-container" align="center">
 	<h3 class="subTittle" align="center">Pending Requests</h3>
 	<table id="pending-table">
-	  <tr>
-	    <th>ID</th>
-	    <th>Employee</th>
-	    <th>type</th>
-	    <th>Description</th>
-	    <th>Amount</th>
-	    <th>Status</th>
-	    <th>Date submitted</th>
-	  </tr>
+		<thead>
+			  <tr>
+			    <th>ID</th>
+			    <th>Employee</th>
+			    <th>type</th>
+			    <th>Description</th>
+			    <th>Amount</th>
+			    <th>Status</th>
+			    <th>Date submitted</th>
+			  </tr>
+		 </thead>
+		 
 	  </table>
 	</div>
 	
 	<div id="resolvedRequest-container" align="center">
 	<h3 class="subTittle" align="center">Resolved Requests</h3>
 	<table id="resolved-table">
-	  <tr>
-	    <th>ID</th>
-	    <th>Employee</th>
-	    <th>Resolver</th>
-	    <th>type</th>
-	    <th>Description</th>
-	    <th>Amount</th>
-	    <th>Status</th>
-	    <th>Date submitted</th>
-	    <th>Date resolved</th>
-	  </tr>
+		<thead>
+			  <tr>
+			    <th>ID</th>
+			    <th>Employee</th>
+			    <th>Resolver</th>
+			    <th>type</th>
+			    <th>Description</th>
+			    <th>Amount</th>
+			    <th>Status</th>
+			    <th>Date submitted</th>
+			    <th>Date resolved</th>
+			  </tr>
+		</thead>
+		
 	  </table>
 	</div>
+	<div style="margin-top: 15px;" id="container5">
+	           <form class="form-wrapper">
+	              <div class="metod">
+	                 <div class="search">
+	                    <input id="searchEmploy" type="text" class="searchTerm" placeholder="Search for...">
+	                    <button id="searchbtn" type="submit" class="searchButton" value="Search">Search</button>
+	                 </div>
+	              </div>
+	           </form>
+	      </div>
 	<script src="../js/AllRequestsInFull.js"></script>
 </body>
 </html>

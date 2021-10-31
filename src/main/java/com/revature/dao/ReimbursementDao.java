@@ -17,6 +17,9 @@ public interface ReimbursementDao {
 	
 	List<ReimbursementDisplay> getAllReimbursementByAuthor(int id);
 	
+	//------Retrieve reimbursements by filtered values
+	List<ReimbursementDisplay> getAllReimbursementIUE(int id, String username, String employeeName);
+	
 	List<Reimbursement> getAllPendingReimbursement();
 	
 	List<Reimbursement> getAllResolvedReimbursement();
@@ -25,5 +28,5 @@ public interface ReimbursementDao {
 	
 	int createNewReimbursement(int author, double amount, String description, String dateSub, int status, int type) throws SQLException;
 	
-	int ApproveDenyReimbursement(int reimbId, Date now, int resolverId, int resolution) throws SQLException;
+	int ApproveDenyReimbursement(int reimbId, String dateResolved, int resolverID, int resolution) throws SQLException;
 }

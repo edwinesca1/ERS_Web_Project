@@ -36,6 +36,33 @@ public class ReimbursementController {
 		}
 	}
 	
+	public static void getAllReimbursementsI(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException{
+		if(req.getMethod().equals("GET")) {
+			int requestID = Integer.parseInt(req.getParameter("reimb"));
+			List<ReimbursementDisplay> reimb = rServ.getAllReimbursementIUE(requestID, "", "");
+			System.out.println(reimb);
+			res.getWriter().write(new ObjectMapper().writeValueAsString(reimb));
+		}
+	}
+	
+	public static void getAllReimbursementsU(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException{
+		if(req.getMethod().equals("GET")) {
+			String username = req.getParameter("name");
+			List<ReimbursementDisplay> reimb = rServ.getAllReimbursementIUE(0, username, "");
+			System.out.println(reimb);
+			res.getWriter().write(new ObjectMapper().writeValueAsString(reimb));
+		}
+	}
+	
+	public static void getAllReimbursementsE(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException{
+		if(req.getMethod().equals("GET")) {
+			String employeeName = req.getParameter("eName");
+			List<ReimbursementDisplay> reimb = rServ.getAllReimbursementIUE(0, "", employeeName);
+			System.out.println(reimb);
+			res.getWriter().write(new ObjectMapper().writeValueAsString(reimb));
+		}
+	}
+	
 	public static void getAllReimbursementsInFull(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException{
 		if(req.getMethod().equals("GET")) {
 			List<ReimbursementDisplay> reimb = rServ.getAllReimbursementInFull();
@@ -106,4 +133,57 @@ public class ReimbursementController {
 				res.getWriter().write(new ObjectMapper().writeValueAsString(reimb));
 			}
 	}
+	
+	public static void resolveReimbursement(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException{
+		HttpSession session = req.getSession();
+		
+		ObjectMapper mapper = new ObjectMapper();
+		ObjectNode ret = mapper.createObjectNode();
+		
+		String pattern = "yyyy-MM-dd";
+		DateFormat df = new SimpleDateFormat(pattern);
+		Date today = Calendar.getInstance().getTime();
+        String date = df.format(today);
+        
+      //To read in stringified JSON data from a POST request is a little more complicated than reading form data
+		StringBuilder buffer = new StringBuilder();
+		
+		//The buffered reader will read the json data line by line
+		BufferedReader reader = req.getReader();
+		
+		String line;
+		while((line = reader.readLine()) != null) {
+			buffer.append(line);
+			buffer.append(System.lineSeparator());
+		}
+		
+		String data = buffer.toString();
+		System.out.println(data);
+		System.out.println(date);
+		
+		JsonNode parsedObj = mapper.readTree(data);
+		
+		int reimbID = parsedObj.get("requestID").asInt();
+		int status = parsedObj.get("finalStatus").asInt();
+		int resolverID = 0;
+		
+			resolverID = (Integer) session.getAttribute("id");
+			
+			int un = rServ.resolveReimbursement(reimbID, date, resolverID, status);
+			System.out.println("Rows been printed: "+ un);
+			if(un > 0) {
+				System.out.println("Rows been printed in Successful: "+ un);
+				
+				res.setStatus(200);
+				ret.put("message", "Reimbursemet request created!");
+				ret.put("transactionStatus", "Successful");
+				res.getWriter().write(new ObjectMapper().writeValueAsString(ret));
+			}else {
+				System.out.println("not rows affected!");
+				
+				res.setStatus(404);
+				ret.put("message", "Request failed!");
+				res.getWriter().write(new ObjectMapper().writeValueAsString(ret));
+			}
+}
 }

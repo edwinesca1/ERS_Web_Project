@@ -44,7 +44,7 @@ function populateRequests(data){
 			let cellp6 = row.insertCell(5);
 			let cellp7 = row.insertCell(6);
 			cellp1.innerHTML = requestObj['reimbId'];
-			cellp2.innerHTML = requestObj['aName'] + " "+ requestObj['aLastname'];
+			cellp2.innerHTML = requestObj['afullName'];
 			cellp3.innerHTML = requestObj['reimbType'];
 			cellp4.innerHTML = requestObj['description'];
 			cellp5.innerHTML = requestObj['amount'];
@@ -81,7 +81,7 @@ async function approveReimbursement(){
 		finalStatus
 	};
 	
-	alert('approve: '+requestID);
+	//alert('approve: '+requestID);
 	try{
 		let req = await fetch('http://localhost:8080/ExpenseReimbursementSystem/api/ResolveReimbursement', {
 				method: 'POST',
@@ -89,7 +89,13 @@ async function approveReimbursement(){
 					'Content-Type': 'application/json'
 				},
 			body: JSON.stringify(resol)
-		});
+		}).then(function(Response) {
+		console.log(Response.status)
+		if(Response.status === 200)
+		{
+			alert('Reimbursement resolved: Approved!');
+			location.href = '../html/ApproveDenieRequest.html';
+		}});
 	}catch(e){
 		console.log('Something went wrong');
 	}
@@ -106,7 +112,7 @@ async function denyReimbursement(){
 		finalStatus
 	};
 	
-	alert('deny: '+requestID);
+	//alert('deny: '+requestID);
 	try{
 		let req = await fetch('http://localhost:8080/ExpenseReimbursementSystem/api/ResolveReimbursement', {
 				method: 'POST',
@@ -114,11 +120,61 @@ async function denyReimbursement(){
 					'Content-Type': 'application/json'
 				},
 			body: JSON.stringify(resol)
-		});
+		}).then(function(Response) {
+		console.log(Response.status)
+		if(Response.status === 200)
+		{
+			alert('Reimbursement resolved: Denied!');
+			location.href = '../html/ApproveDenieRequest.html';
+		}});;
 	}catch(e){
 		console.log('Something went wrong');
 	}
 }
+
+//--------------------------------filtered search------------------------------------------------------
+
+document.getElementById('searchbtn').addEventListener('click', filteredPendingReimbursments);
+
+async function filteredPendingReimbursments(e){
+	e.preventDefault();
+	let filterValue = document.getElementById('searchEmploy').value;
+	let rdbtn = document.getElementsByName('metod');
+	let filterType;
+              
+            for(i = 0; i < rdbtn.length; i++) {
+                if(rdbtn[i].checked)
+                filterType = rdbtn[i].value;
+            }
+    let res;
+    let data;
+           
+    if(filterType == 1){
+		//alert('By Request ID');
+		res = await fetch('http://localhost:8080/ExpenseReimbursementSystem/api/filteredRequestI?reimb='+filterValue);
+		data = await res.json();
+	}else if(filterType == 3){
+		//alert('By Username');
+		res = await fetch('http://localhost:8080/ExpenseReimbursementSystem/api/filteredRequestU?name='+filterValue);
+		data = await res.json();
+	}else{
+		//alert('By Employee name');
+		res = await fetch('http://localhost:8080/ExpenseReimbursementSystem/api/filteredRequestE?eName='+filterValue);
+		data = await res.json();
+	}
+	
+	let table = document.getElementById('pending-table');
+	 let row = table.getElementsByTagName('tbody')[0];
+	 deleteTBody(row);
+	 let node = document.createElement('tbody');
+	 table.appendChild(node);
+	 
+	 populateRequests(data);
+}
+
+function deleteTBody (row) {
+    row.parentNode.removeChild(row);
+};
 
 
 /*

@@ -30,6 +30,10 @@ public class ReimbursementService {
 		return rDao.getAllReimbursementByAuthor(id);
 	}
 	
+	public List<ReimbursementDisplay> getAllReimbursementIUE(int id, String username, String employeeName){
+		return rDao.getAllReimbursementIUE(id, username, employeeName);
+	}
+	
 	public int createNewReimb(int author, double amount, String description, String dateSub, int status, int type) {
 		
 		int rowsAffected = 0;
@@ -39,6 +43,19 @@ public class ReimbursementService {
 		}catch(SQLException e) {
 			Logging.logger.warn("New Reimbursement request failed!");
 		}
+		return rowsAffected;
+	}
+	
+	public int resolveReimbursement(int reimbID, String dateResolved, int resolverID, int resolution) {
+		int rowsAffected = 0;
+		
+		try {
+			rowsAffected = rDao.ApproveDenyReimbursement(reimbID, dateResolved, resolverID, resolution);
+			System.out.println("Rows forwarded: "+ rowsAffected);
+		}catch(SQLException e) {
+			Logging.logger.warn("New Reimbursement request failed!");
+		}
+		
 		return rowsAffected;
 	}
 }

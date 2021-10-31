@@ -33,7 +33,7 @@ function populateRequests(data){
 			let cellp6 = row.insertCell(5);
 			let cellp7 = row.insertCell(6);
 			cellp1.innerHTML = requestObj['reimbId'];
-			cellp2.innerHTML = requestObj['aName'] + " "+ requestObj['aLastname'];
+			cellp2.innerHTML = requestObj['afullName'];
 			cellp3.innerHTML = requestObj['reimbType'];
 			cellp4.innerHTML = requestObj['description'];
 			cellp5.innerHTML = requestObj['amount'];
@@ -57,8 +57,8 @@ function populateRequests(data){
 			let cellr8 = row.insertCell(7);
 			let cellr9 = row.insertCell(8);
 			cellr1.innerHTML = requestObj1['reimbId'];
-			cellr2.innerHTML = requestObj1['aName'] + " " + requestObj['aLastname'];
-			cellr3.innerHTML = requestObj1['rName'] + " " + requestObj['rLastname'];
+			cellr2.innerHTML = requestObj1['afullName'];
+			cellr3.innerHTML = requestObj1['rfullName'];
 			cellr4.innerHTML = requestObj1['reimbType'];
 			cellr5.innerHTML = requestObj1['description'];
 			cellr6.innerHTML = requestObj1['amount'];
