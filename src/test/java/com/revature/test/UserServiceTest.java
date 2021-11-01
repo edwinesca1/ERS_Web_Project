@@ -2,9 +2,11 @@ package com.revature.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -103,33 +105,50 @@ public class UserServiceTest {
 	}
 	
 	@Test
-	public void testCreatNewUser() {
+	public void testCreatNewUser() throws SQLException {
 		//uServ.SignUp("test", "user", "test@email.com", "testuser", "password", 1);
 		when(uServ.SignUp("test", "user", "test@email.com", "testuser", "password", 1)).thenReturn(1);
 		List<User> userList = uServ.getAllUsers();
 		
-		assertEquals(1, userList.size());
+		when(uDao.createAccount(anyString(), anyString(), anyString(), anyString(), anyString(), anyInt())).thenThrow(new SQLException());
+		
+		int val = uServ.SignUp("", "", "", "", "", 0);
+		//assertEquals(1, userList.size());
 	}
 	
 	@Test(expected = InvalidCredentialsException.class)
-	public void testUpdateAccountNotExists() {
-		User u1 = new User(1, "testuser", "testpass","test", "user", "test@mail.com", 2);
-		User u2 = new User(2, "testuser1", "testpass","test1", "user1", "test1@mail.com", 2);
-		User not = new User(0, "", "", "", "", "", 0);
-		when(uDao.getUserByUsername(anyString())).thenReturn(not);
-		
-		int customer = uServ.updateAccount("", "", "", "", "", "");
-		
-	} 
-	
-	@Test(expected = InvalidCredentialsException.class)
-	public void testUpdateAccountInvalidCredentials() {
+	public void testUpdateAccountInvalidCredentials() throws SQLException {
 		User u1 = new User(1, "testuser", "testpass","test", "user", "test@mail.com", 2);
 		User u2 = new User(2, "testuser1", "testpass","test1", "user1", "test1@mail.com", 2);
 		User not = new User(0, "", "", "", "", "", 0);
 		when(uDao.getUserByUsername(anyString())).thenReturn(u1);
 		
+		when(uDao.updateUser(anyInt(), anyString(), anyString(), anyString(), anyString(), anyString(), anyString())).thenThrow(new InvalidCredentialsException());
+		
 		int customer = uServ.updateAccount("", "", "", "", "", "testwrong");	
+	} 
+	
+	@Test(expected = InvalidCredentialsException.class)
+	public void testUpdateAccountInvalidCredentials2() throws SQLException {
+		User u1 = new User(1, "testuser", "testpass","test", "user", "test@mail.com", 2);
+		User u2 = new User(2, "testuser1", "testpass","test1", "user1", "test1@mail.com", 2);
+		User not = new User(0, "", "", "", "", "", 0);
+		when(uDao.getUserByUsername(anyString())).thenReturn(not);
+		
+		when(uDao.updateUser(anyInt(), anyString(), anyString(), anyString(), anyString(), anyString(), anyString())).thenThrow(new InvalidCredentialsException());
+		
+		int customer = uServ.updateAccount("", "", "", "", "", "testwrong");	
+	} 
+	
+	@Test
+	public void testUpdateAccountFail() throws SQLException {
+		User u1 = new User(1, "testuser", "testpass","test", "user", "test@mail.com", 2);
+		User u2 = new User(2, "testuser1", "testpass","test1", "user1", "test1@mail.com", 2);
+		when(uDao.getUserByUsername(anyString())).thenReturn(u1);
+		
+		when(uDao.updateUser(anyInt(), anyString(), anyString(), anyString(), anyString(), anyString(), anyString())).thenThrow(new SQLException());
+		
+		int customer = uServ.updateAccount("", "", "", "", "", "testpass");
 	} 
 	
 	@Test

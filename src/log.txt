@@ -86,3 +86,139 @@
 2021-10-31 20:46:40 WARN  Logging:80 - Confirmation password does not match
 2021-10-31 20:46:40 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
 2021-10-31 20:46:40 INFO  Logging:37 - User info retrieve succesfully
+2021-10-31 23:40:30 WARN  Logging:44 - New Reimbursement request failed!
+2021-10-31 23:41:57 WARN  Logging:44 - New Reimbursement request failed!
+2021-10-31 23:45:41 WARN  Logging:56 - New Reimbursement request failed!
+2021-10-31 23:45:41 WARN  Logging:44 - New Reimbursement request failed!
+2021-10-31 23:46:35 WARN  Logging:56 - New Reimbursement request failed!
+2021-10-31 23:46:35 WARN  Logging:44 - New Reimbursement request failed!
+2021-10-31 23:47:24 WARN  Logging:34 - User is not logged in
+2021-10-31 23:47:24 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 23:47:24 INFO  Logging:53 - User logged in successfully
+2021-10-31 23:47:24 WARN  Logging:77 - User does not exist in the data base
+2021-10-31 23:47:24 WARN  Logging:78 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-10-31 23:47:24 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 23:47:24 WARN  Logging:80 - Confirmation password does not match
+2021-10-31 23:47:24 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-10-31 23:47:24 INFO  Logging:37 - User info retrieve succesfully
+2021-10-31 23:56:02 WARN  Logging:34 - User is not logged in
+2021-10-31 23:56:02 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 23:56:02 INFO  Logging:53 - User logged in successfully
+2021-10-31 23:56:02 WARN  Logging:77 - User does not exist in the data base
+2021-10-31 23:56:02 WARN  Logging:78 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-10-31 23:56:02 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 23:56:02 WARN  Logging:64 - Create new account failed
+2021-10-31 23:56:02 WARN  Logging:80 - Confirmation password does not match
+2021-10-31 23:56:02 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-10-31 23:56:02 INFO  Logging:37 - User info retrieve succesfully
+2021-11-01 00:03:23 WARN  Logging:34 - User is not logged in
+2021-11-01 00:03:23 WARN  Logging:47 - User does not exist in the data base
+2021-11-01 00:03:23 INFO  Logging:53 - User logged in successfully
+2021-11-01 00:03:23 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-11-01 00:03:23 WARN  Logging:64 - Create new account failed
+2021-11-01 00:03:23 INFO  Logging:37 - User info retrieve succesfully
+2021-11-01 00:03:23 WARN  Logging:77 - User does not exist in the data base
+2021-11-01 00:03:23 WARN  Logging:78 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:05:43 WARN  Logging:34 - User is not logged in
+2021-11-01 00:05:43 WARN  Logging:47 - User does not exist in the data base
+2021-11-01 00:05:43 INFO  Logging:53 - User logged in successfully
+2021-11-01 00:05:43 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-11-01 00:05:43 WARN  Logging:64 - Create new account failed
+2021-11-01 00:05:43 WARN  Logging:80 - Confirmation password does not match
+2021-11-01 00:05:43 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:05:43 INFO  Logging:37 - User info retrieve succesfully
+2021-11-01 00:05:43 WARN  Logging:77 - User does not exist in the data base
+2021-11-01 00:05:43 WARN  Logging:78 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:06:58 WARN  Logging:34 - User is not logged in
+2021-11-01 00:06:58 WARN  Logging:47 - User does not exist in the data base
+2021-11-01 00:06:58 INFO  Logging:53 - User logged in successfully
+2021-11-01 00:06:58 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-11-01 00:06:58 WARN  Logging:64 - Create new account failed
+2021-11-01 00:06:58 INFO  Logging:37 - User info retrieve succesfully
+2021-11-01 00:06:58 WARN  Logging:77 - User does not exist in the data base
+2021-11-01 00:06:58 WARN  Logging:78 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:08:30 WARN  Logging:34 - User is not logged in
+2021-11-01 00:08:30 WARN  Logging:47 - User does not exist in the data base
+2021-11-01 00:08:30 INFO  Logging:53 - User logged in successfully
+2021-11-01 00:08:30 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-11-01 00:08:30 WARN  Logging:64 - Create new account failed
+2021-11-01 00:08:30 WARN  Logging:80 - Confirmation password does not match
+2021-11-01 00:08:30 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:08:30 INFO  Logging:37 - User info retrieve succesfully
+2021-11-01 00:08:30 WARN  Logging:77 - User does not exist in the data base
+2021-11-01 00:08:30 WARN  Logging:78 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:10:49 WARN  Logging:34 - User is not logged in
+2021-11-01 00:10:49 WARN  Logging:47 - User does not exist in the data base
+2021-11-01 00:10:49 INFO  Logging:53 - User logged in successfully
+2021-11-01 00:10:49 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-11-01 00:10:49 WARN  Logging:64 - Create new account failed
+2021-11-01 00:10:49 WARN  Logging:80 - Confirmation password does not match
+2021-11-01 00:10:49 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:10:49 INFO  Logging:37 - User info retrieve succesfully
+2021-11-01 00:10:49 WARN  Logging:86 - Update account failed
+2021-11-01 00:14:47 WARN  Logging:34 - User is not logged in
+2021-11-01 00:14:47 WARN  Logging:47 - User does not exist in the data base
+2021-11-01 00:14:47 INFO  Logging:53 - User logged in successfully
+2021-11-01 00:14:47 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-11-01 00:14:47 WARN  Logging:64 - Create new account failed
+2021-11-01 00:14:47 WARN  Logging:80 - Confirmation password does not match
+2021-11-01 00:14:47 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:14:47 INFO  Logging:37 - User info retrieve succesfully
+2021-11-01 00:14:47 WARN  Logging:86 - Update account failed
+2021-11-01 00:16:45 WARN  Logging:34 - User is not logged in
+2021-11-01 00:16:45 WARN  Logging:47 - User does not exist in the data base
+2021-11-01 00:16:45 INFO  Logging:53 - User logged in successfully
+2021-11-01 00:16:45 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-11-01 00:16:45 WARN  Logging:64 - Create new account failed
+2021-11-01 00:16:45 WARN  Logging:80 - Confirmation password does not match
+2021-11-01 00:16:45 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:16:45 INFO  Logging:37 - User info retrieve succesfully
+2021-11-01 00:16:45 WARN  Logging:86 - Update account failed
+2021-11-01 00:18:03 WARN  Logging:34 - User is not logged in
+2021-11-01 00:18:03 WARN  Logging:47 - User does not exist in the data base
+2021-11-01 00:18:03 INFO  Logging:53 - User logged in successfully
+2021-11-01 00:18:03 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-11-01 00:18:03 WARN  Logging:64 - Create new account failed
+2021-11-01 00:18:03 WARN  Logging:80 - Confirmation password does not match
+2021-11-01 00:18:03 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:18:03 INFO  Logging:37 - User info retrieve succesfully
+2021-11-01 00:18:03 WARN  Logging:86 - Update account failed
+2021-11-01 00:18:03 WARN  Logging:77 - User does not exist in the data base
+2021-11-01 00:18:03 WARN  Logging:78 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:19:54 WARN  Logging:34 - User is not logged in
+2021-11-01 00:19:54 WARN  Logging:47 - User does not exist in the data base
+2021-11-01 00:19:54 INFO  Logging:53 - User logged in successfully
+2021-11-01 00:19:54 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-11-01 00:19:54 WARN  Logging:64 - Create new account failed
+2021-11-01 00:19:54 WARN  Logging:80 - Confirmation password does not match
+2021-11-01 00:19:54 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:19:54 INFO  Logging:37 - User info retrieve succesfully
+2021-11-01 00:19:54 WARN  Logging:86 - Update account failed
+2021-11-01 00:19:54 WARN  Logging:77 - User does not exist in the data base
+2021-11-01 00:19:54 WARN  Logging:78 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:20:38 WARN  Logging:34 - User is not logged in
+2021-11-01 00:20:38 WARN  Logging:47 - User does not exist in the data base
+2021-11-01 00:20:38 INFO  Logging:53 - User logged in successfully
+2021-11-01 00:20:38 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-11-01 00:20:38 WARN  Logging:64 - Create new account failed
+2021-11-01 00:20:38 WARN  Logging:80 - Confirmation password does not match
+2021-11-01 00:20:38 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:20:38 INFO  Logging:37 - User info retrieve succesfully
+2021-11-01 00:20:38 WARN  Logging:86 - Update account failed
+2021-11-01 00:20:38 WARN  Logging:77 - User does not exist in the data base
+2021-11-01 00:20:38 WARN  Logging:78 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:22:22 WARN  Logging:56 - New Reimbursement request failed!
+2021-11-01 00:22:22 WARN  Logging:44 - New Reimbursement request failed!
+2021-11-01 00:23:04 WARN  Logging:34 - User is not logged in
+2021-11-01 00:23:04 WARN  Logging:47 - User does not exist in the data base
+2021-11-01 00:23:04 INFO  Logging:53 - User logged in successfully
+2021-11-01 00:23:04 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-11-01 00:23:04 WARN  Logging:64 - Create new account failed
+2021-11-01 00:23:04 WARN  Logging:80 - Confirmation password does not match
+2021-11-01 00:23:04 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:23:04 INFO  Logging:37 - User info retrieve succesfully
+2021-11-01 00:23:04 WARN  Logging:86 - Update account failed
+2021-11-01 00:23:04 WARN  Logging:77 - User does not exist in the data base
+2021-11-01 00:23:04 WARN  Logging:78 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-11-01 00:23:04 WARN  Logging:56 - New Reimbursement request failed!
+2021-11-01 00:23:04 WARN  Logging:44 - New Reimbursement request failed!
