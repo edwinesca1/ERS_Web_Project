@@ -1,0 +1,88 @@
+2021-10-31 18:58:49 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 19:01:11 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 19:01:54 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 19:03:06 INFO  Logging:53 - User logged in successfully
+2021-10-31 19:03:43 INFO  Logging:53 - User logged in successfully
+2021-10-31 19:05:51 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 19:05:51 INFO  Logging:53 - User logged in successfully
+2021-10-31 19:05:51 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 19:27:35 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 19:27:35 INFO  Logging:53 - User logged in successfully
+2021-10-31 19:27:35 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 19:35:42 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 19:35:42 INFO  Logging:53 - User logged in successfully
+2021-10-31 19:35:42 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 19:41:36 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 19:41:36 INFO  Logging:53 - User logged in successfully
+2021-10-31 19:41:36 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 19:50:21 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 19:50:21 INFO  Logging:53 - User logged in successfully
+2021-10-31 19:50:21 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 19:51:47 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 19:51:47 INFO  Logging:53 - User logged in successfully
+2021-10-31 19:51:47 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 19:52:08 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 19:52:08 INFO  Logging:53 - User logged in successfully
+2021-10-31 19:52:08 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 19:57:59 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 19:57:59 INFO  Logging:53 - User logged in successfully
+2021-10-31 19:57:59 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 19:59:02 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 19:59:02 INFO  Logging:53 - User logged in successfully
+2021-10-31 19:59:02 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 19:59:28 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 19:59:28 INFO  Logging:53 - User logged in successfully
+2021-10-31 19:59:28 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 20:00:29 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 20:00:29 INFO  Logging:53 - User logged in successfully
+2021-10-31 20:00:29 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 20:12:57 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 20:12:57 INFO  Logging:53 - User logged in successfully
+2021-10-31 20:12:57 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 20:15:07 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 20:15:07 INFO  Logging:53 - User logged in successfully
+2021-10-31 20:15:07 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 20:16:24 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 20:16:24 INFO  Logging:53 - User logged in successfully
+2021-10-31 20:16:24 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 20:20:24 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 20:20:24 INFO  Logging:53 - User logged in successfully
+2021-10-31 20:20:24 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 20:27:53 WARN  Logging:34 - User is not logged in
+2021-10-31 20:27:53 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 20:27:53 INFO  Logging:53 - User logged in successfully
+2021-10-31 20:27:53 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 20:28:55 WARN  Logging:34 - User is not logged in
+2021-10-31 20:28:55 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 20:28:55 INFO  Logging:53 - User logged in successfully
+2021-10-31 20:28:55 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 20:32:22 WARN  Logging:34 - User is not logged in
+2021-10-31 20:32:22 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 20:32:22 INFO  Logging:53 - User logged in successfully
+2021-10-31 20:32:22 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 20:32:22 INFO  Logging:37 - User info retrieve succesfully
+2021-10-31 20:39:30 WARN  Logging:34 - User is not logged in
+2021-10-31 20:39:30 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 20:39:30 INFO  Logging:53 - User logged in successfully
+2021-10-31 20:39:30 WARN  Logging:77 - User does not exist in the data base
+2021-10-31 20:39:30 WARN  Logging:78 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-10-31 20:39:30 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 20:39:30 INFO  Logging:37 - User info retrieve succesfully
+2021-10-31 20:41:31 WARN  Logging:34 - User is not logged in
+2021-10-31 20:41:31 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 20:41:31 INFO  Logging:53 - User logged in successfully
+2021-10-31 20:41:31 WARN  Logging:77 - User does not exist in the data base
+2021-10-31 20:41:31 WARN  Logging:78 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-10-31 20:41:31 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 20:41:31 WARN  Logging:80 - Confirmation password does not match
+2021-10-31 20:41:31 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-10-31 20:41:31 INFO  Logging:37 - User info retrieve succesfully
+2021-10-31 20:46:40 WARN  Logging:34 - User is not logged in
+2021-10-31 20:46:40 WARN  Logging:47 - User does not exist in the data base
+2021-10-31 20:46:40 INFO  Logging:53 - User logged in successfully
+2021-10-31 20:46:40 WARN  Logging:77 - User does not exist in the data base
+2021-10-31 20:46:40 WARN  Logging:78 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-10-31 20:46:40 WARN  Logging:50 - User tried to logIn with invalid credentials
+2021-10-31 20:46:40 WARN  Logging:80 - Confirmation password does not match
+2021-10-31 20:46:40 WARN  Logging:81 - com.revature.exceptions.InvalidCredentialsException: Credentials does not match
+2021-10-31 20:46:40 INFO  Logging:37 - User info retrieve succesfully
