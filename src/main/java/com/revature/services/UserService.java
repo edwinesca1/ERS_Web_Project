@@ -55,6 +55,18 @@ public class UserService {
 		}
 	}
 	
+	public int SignUp(String first, String last, String email, String username, String password, int roleID) {
+		int rows = 0;
+		
+		try {
+		rows = uDao.createAccount(first, last, email, username, password, roleID);
+		}catch(SQLException e) {
+			Logging.logger.warn("Create new account failed");
+		}
+		
+		return rows;
+	}
+	
 	public int updateAccount(String f, String l, String e, String u, String nPass, String cPass) {
 		
 		User us = uDao.getUserByUsername(u);

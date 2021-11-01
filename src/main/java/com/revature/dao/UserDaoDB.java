@@ -15,6 +15,37 @@ public class UserDaoDB implements UserDao{
 
 	ConnectionUtil conUtil = ConnectionUtil.getConnectionUtil();
 	
+	
+	public int getEmailUsername(String username, String email){
+		 int goodBad = 0;
+		try {
+			//make the actual connection to the DB
+			Connection con = conUtil.getConnection();
+			
+			//Creating a simple statement
+			String sql = "select ers_users.ers_username, ers_users.user_email from ers_users";
+			
+			//We need to create a statement with the sql string
+			Statement s = con.createStatement();
+			ResultSet rs = s.executeQuery(sql);
+			
+			//We have to loop through the resultset an create objects based off the return
+			while(rs.next()) {
+				System.out.println("printing usernames: " + rs.getString(1));
+				System.out.println("printing emails: "+rs.getString(2));
+				if(username.toLowerCase().equals(rs.getString(1).toLowerCase())) {
+					return 2;
+				}else if(email.toLowerCase().equals(rs.getString(2).toLowerCase())) {
+					return 3;
+				}
+			}
+
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return goodBad;
+	}
+	
 	@Override
 	public List<User> getAllUsers() {
 		
@@ -149,6 +180,44 @@ public class UserDaoDB implements UserDao{
 		User u1 = getUserByUsername(u.getUsername()); 
 		return u1;
 	}
+	
+	@Override
+	public int createAccount(String first, String last, String email, String username, String password, int roleID)
+			throws SQLException {
+		
+		Connection con = conUtil.getConnection();
+		
+		int verify = getEmailUsername(username, email);
+		
+		System.out.println("printing veify: "+ verify);
+		if(verify > 0)
+		{
+			return verify;
+		}else {
+			System.out.println("printing before insert into users");
+			//Another way to crate the statement for the query
+			String sql = "INSERT INTO ers_users(ers_username, ers_password, user_first_name, user_last_name, user_email, user_role_id) VALUES"
+					+"(?,?,?,?,?,?) returning ers_user_id";
+			
+			PreparedStatement ps = con.prepareStatement(sql);
+			
+			ps.setString(1, username);
+			ps.setString(2, password);
+			ps.setString(3, first);
+			ps.setString(4, last);
+			ps.setString(5, email);
+			ps.setInt(6, roleID);
+			
+			ps.execute();
+			
+			ResultSet rs = ps.getResultSet();
+			rs.next();
+			int idCol =  rs.getInt(1);
+			System.out.println(rs.getInt(1));
+			if(idCol > 0) {return 1;}
+			else return 0;
+		}
+	}
 
 	@Override
 	public int updateUser(int id, String f, String l, String e, String u, String nPass, String cPass) throws SQLException {
@@ -176,5 +245,4 @@ public class UserDaoDB implements UserDao{
 		
 		return rowsAffected;
 	}
-
 }

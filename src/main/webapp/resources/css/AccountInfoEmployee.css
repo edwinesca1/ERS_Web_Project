@@ -6,13 +6,14 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+   /* background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);*/
+ background: radial-gradient(circle, rgba(194,200,224,255) 0%, rgba(222,224,237,255) 100%);
   font-family: 'Ubuntu', sans-serif;
 }
 
 .fTittle{
 	font-family: 'Ubuntu', sans-serif;
-	color: #f2f2f2;
+	color: #8C55AA;
 }
 
 .topnav {
@@ -54,8 +55,6 @@ body {
 }
 
 h1 {
-  font-size: 24px;
-
   color: rgb(255, 255, 255);
   padding: 22px 25px;
   border-radius: 5px 5px 0px 0px;
@@ -85,9 +84,8 @@ p {
 }
 
 h1 {
-  font-size: 24px;
   font-family: 'Ubuntu', sans-serif;
-  color: #f2f2f2;
+  color: #8C55AA;
   padding: 22px 25px;
   border-radius: 5px;
   margin: 5px auto; 

@@ -25,6 +25,12 @@ public class User {
 			this.email = email;
 			this.userRole = userRole;
 		}
+		
+		public User (String username, String email) {
+			super();
+			this.username = username;
+			this.email = email;
+		}
 
 		public int getUserId() {
 			return userId;

@@ -48,7 +48,7 @@ let form = document.getElementById("UpdateAccount").addEventListener('submit', u
 async function updateInfo(e){
 	
 	e.preventDefault();
-	alert('POST method');
+	//alert('POST method');
 	let fName = document.getElementById('fName').value;
 	let lName = document.getElementById('lName').value;
 	let email = document.getElementById('email').value;

@@ -21,6 +21,9 @@ public class Dispatcher{
 		case "/ExpenseReimbursementSystem/api/login":
 			LoginController.login(req, res);
 			break;
+		case "/ExpenseReimbursementSystem/api/signup":
+			LoginController.signup(req, res);
+			break;
 		case "/ExpenseReimbursementSystem/api/employees":
 			EmployeesController.getAllEmployees(req, res);
 			break;

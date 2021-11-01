@@ -26,7 +26,7 @@ document.getElementById('newRequest').addEventListener('submit', NewReimbRequest
 
 async function NewReimbRequest(e){
 	e.preventDefault();
-	alert('POST method');
+	//alert('POST method');
 	
 	let amount = document.getElementById('amount').value;
 	let description = document.getElementById('description').value;

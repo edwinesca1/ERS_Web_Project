@@ -6,13 +6,14 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  /*background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);*/
+  background: radial-gradient(circle, rgba(194,200,224,255) 0%, rgba(222,224,237,255) 100%);
   font-family: 'Ubuntu', sans-serif;
 }
 
 .fTittle{
 	font-family: 'Ubuntu', sans-serif;
-	color: #f2f2f2;
+	color: #8C55AA;
 }
 
 .topnav {
@@ -57,7 +58,7 @@ body {
     
 .subTittle{
 	font-family: 'Ubuntu', sans-serif;
-	color: #f2f2f2;
+	color: #8C55AA;
 }
     
  table {

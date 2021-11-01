@@ -71,8 +71,8 @@ function setFormValues(obj){
 document.getElementById('btnapprove').addEventListener('click', approveReimbursement);
 document.getElementById('btndeny').addEventListener('click', denyReimbursement);
 
-async function approveReimbursement(){
-	//e.preventDefault();
+async function approveReimbursement(e){
+	e.preventDefault();
 	let	requestID = document.getElementById('ID').value;
 	let	finalStatus = 2;
 	
@@ -102,8 +102,8 @@ async function approveReimbursement(){
 	
 }
 
-async function denyReimbursement(){
-	//e.preventDefault();
+async function denyReimbursement(e){
+	e.preventDefault();
 	let	requestID = document.getElementById('ID').value;
 	let	finalStatus = 3;
 	
