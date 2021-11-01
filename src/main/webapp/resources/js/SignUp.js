@@ -31,12 +31,14 @@ async function signup(e){
 		});
 		let res = await req.json();
 	
-			if(res.transactionStatus === 'Succesful'){
+			if(res.transactionStatus === 'Successful'){
 				alert(res.message);
-				//location.href = '../html/login.html';
-				window.location = '../html/login.html';
+				console.log('inside if transactionstatus');
+				location.href = '../html/login.html';
+				//window.location = '../html/login.html';
 			}else{
-			alert(res.message);
+				console.log('inside else transactionstatus');
+				alert(res.message);
 			}
 		}catch(e){
 			alert(e.message);

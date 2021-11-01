@@ -110,8 +110,8 @@ public class LoginController {
 						res.getWriter().write(new ObjectMapper().writeValueAsString(ret));
 					}else {
 						res.setStatus(200);
-						ret.put("transactionStatus", "Succesful!");
 						ret.put("message", "Account created!");
+						ret.put("transactionStatus", "Successful");
 						res.getWriter().write(new ObjectMapper().writeValueAsString(ret));
 					}
 				} catch(Exception e) {
